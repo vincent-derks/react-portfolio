@@ -29,6 +29,10 @@ body:after { position: fixed; content: ''; left: 0; top: 0; right: 0; bottom: 0;
 
 .mainContent { text-align: center; padding: 50px; max-width: 1024px; margin: 0 auto; position: relative; }
 
+@media(max-width: 950px){
+    .mainContent { padding: 10px; }
+}
+
 .workList { list-style: none; display: flex; padding: 0; justify-content: space-around; }
 .workList > li { cursor: pointer; transition: all 0.2s ease-in-out; flex: 1; margin: 2em; box-shadow: 0px 1px 5px rgba(0,0,0,0.2); border-radius: 0 0 4px 4px; position: relative; border-bottom: 5px solid rgba(33,150,244,0.3); background: #fff; display: flex; flex-direction: column; transition: all 0.3s ease-in-out; }
 .workList > li:hover { border-bottom: 5px solid rgba(33,150,244,1); box-shadow: 0px 2px 5px rgba(0,0,0,0.4); }
