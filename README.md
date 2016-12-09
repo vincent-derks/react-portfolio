@@ -7,4 +7,4 @@
 `webpack`
 
 ## Build production
-`webpack -p --config ./webpack.config.production.js`
+`webpack -p`
