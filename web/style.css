@@ -117,7 +117,7 @@ body { color: #fff; -webkit-font-smoothing: antialiased; font-family: 'Open Sans
 }
 
 @media( max-width: 370px ){
-    h1 { font-size: 3rem; }
+    h1 { font-size: 2.2rem; }
 }
 
 /**** REACT CSS TRANSITIONS ****/
