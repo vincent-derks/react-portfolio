@@ -35,7 +35,7 @@ body[data-color="blue"] #scene li div { background-color: rgb(255,255,255); }
     .toggleMenu.open:after { transform: rotate(45deg) translate(-0.8rem, -0.6rem); }
 }
 
-.mainNav { position: fixed; left: 0px; right: 0px; bottom: 0; top: 0; transition: transform 0.2s ease-in-out, border-bottom-color 0.4s ease-in-out; border-bottom: 5px solid rgb(94, 126, 186); z-index: 1; will-change: transform, border-bottom-color; background: #000; }
+.mainNav { position: fixed; left: 0px; right: 0px; top: 0; transition: transform 0.2s ease-in-out, border-bottom-color 0.4s ease-in-out; border-bottom: 5px solid rgb(94, 126, 186); z-index: 1; will-change: transform, border-bottom-color; background: #000; }
 
 body[data-color="green"] .mainNav { border-bottom-color: rgb(158, 198, 0); }
 body[data-color="red"] .mainNav { border-bottom-color: rgb(179, 0, 0); }
@@ -45,7 +45,7 @@ body[data-color="blue"] .mainNav { border-bottom-color: rgb(3, 217, 255); }
 .mainNav.closed ul li { opacity: 0; transform: translateY(-100%); transition: all 0.01s ease-in-out; transition-delay: 0s!important; }
 .mainNav.open { transform: translateY(0); }
 .mainNav.open ul li { opacity: 1; transform: translateY(0); }
-.mainNav ul { display: flex; flex: 1; flex-direction: row; list-style: none; align-items: center; justify-content: center; text-align: center; margin: 0; padding: 0; height: 100vh; }
+.mainNav ul { display: flex; flex: 1; flex-direction: row; list-style: none; align-items: center; justify-content: center; text-align: center; margin: 0; padding: 0; }
 .mainNav ul li { background: rgba(0,0,0,1); transition: all 0.15s ease-in-out; cursor: pointer; flex-wrap: wrap; transition: all 0.2s ease-in-out 0.15s; }
 .mainNav ul li.toggleSpacer { flex: 0 0 80px; }
 .mainNav ul li:hover { background: #000;}
@@ -65,7 +65,7 @@ body[data-color="blue"] .mainNav ul li a i { color: rgb(3, 217, 255); }
 }
 
 @media(max-width: 950px){
-    .mainNav ul { flex-direction: column; }
+    .mainNav ul { flex-direction: column; height: 100vh;}
     .mainNav ul li.toggleSpacer { display: none; }
 }
 
@@ -79,9 +79,12 @@ body[data-color="blue"] .mainNav ul li a i { color: rgb(3, 217, 255); }
     .mainContent { padding: 20px 10px 10px 10px; }
 }
 
-.workList { list-style: none; display: flex; padding: 0; justify-content: space-around; }
-.workList > li { cursor: pointer; transition: all 0.2s ease-in-out; flex: 1; margin: 2em; box-shadow: 0px 1px 5px rgba(0,0,0,0.5); border-radius: 0 0 4px 4px; position: relative; border-bottom: 5px solid rgb(105,0,255); background: rgba(0,0,0,0.5); display: flex; flex-direction: column; transition: all 0.3s ease-in-out; }
-.workList > li:hover { border-bottom: 5px solid rgba(33,150,244,1); box-shadow: 0px 2px 5px rgba(0,0,0,0.4); }
+.workList { list-style: none; display: flex; padding: 0; justify-content: space-around; flex-direction: row; flex-wrap: wrap; }
+.workList > li { cursor: pointer; transition: all 0.2s ease-in-out; margin: 2em; box-shadow: 0px 1px 5px rgba(0,0,0,0.5); border-radius: 0 0 4px 4px; position: relative; border-bottom: 5px solid rgb(105,0,255); background: rgba(0,0,0,0.5); display: flex; flex-direction: column; transition: all 0.3s ease-in-out; width: calc(50% - 4em); }
+body[data-color="green"] .workList > li { border-bottom-color: rgb(158, 198, 0); }
+body[data-color="red"] .workList > li { border-bottom-color: rgb(179, 0, 0); }
+body[data-color="blue"] .workList > li { border-bottom-color: rgb(3, 217, 255); }
+.workList > li:hover {  }
 .workList > li .thumbnail { display: flex; flex: 3; flex-grow: 3; border-radius: 0; border: none; overflow: hidden; border-bottom: 1px solid #eee; margin-bottom: 0; padding: 0; align-items: center;}
 .workList > li .thumbnail img { opacity: 0.6; transition: opacity 0.2s ease-in-out; }
 .workList > li:hover .thumbnail img { opacity: 1; }

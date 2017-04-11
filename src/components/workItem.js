@@ -17,7 +17,7 @@ export default class WorkItem extends Component {
         const item = this.props.item
         return(
             <li ref="item" onClick={this.toggleItem.bind(this)}>
-                <div className="thumbnail"><img src={item.logo} /></div>
+                {/* <div className="thumbnail"><img src={item.logo} /></div> */}
                 <div className="workItemContent">
                     <h3>{item.title}</h3>
                     <p>{item.text}</p>
