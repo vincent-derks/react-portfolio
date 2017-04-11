@@ -35,16 +35,18 @@ body[data-color="blue"] #scene li div { background-color: rgb(255,255,255); }
     .toggleMenu.open:after { transform: rotate(45deg) translate(-0.8rem, -0.6rem); }
 }
 
-.mainNav { position: fixed; left: 0px; right: 0px; transition: transform 0.15s ease-in-out, border-bottom-color 0.4s ease-in-out; border-bottom: 5px solid rgb(94, 126, 186); z-index: 1; will-change: transform, border-bottom-color; }
+.mainNav { position: fixed; left: 0px; right: 0px; bottom: 0; top: 0; transition: transform 0.2s ease-in-out, border-bottom-color 0.4s ease-in-out; border-bottom: 5px solid rgb(94, 126, 186); z-index: 1; will-change: transform, border-bottom-color; background: #000; }
 
 body[data-color="green"] .mainNav { border-bottom-color: rgb(117,117,0); }
 body[data-color="red"] .mainNav { border-bottom-color: rgb(87,1,1); }
 body[data-color="blue"] .mainNav { border-bottom-color: rgb(94,126,186); }
 
 .mainNav.closed { transform: translateY(calc(-100% + 5px)); }
+.mainNav.closed ul li { opacity: 0; transform: translateY(-100%); transition: all 0.01s ease-in-out; transition-delay: 0s!important; }
 .mainNav.open { transform: translateY(0); }
-.mainNav ul { display: flex; flex: 1; flex-direction: row; list-style: none; justify-content: space-around; text-align: center; margin: 0; padding: 0; }
-.mainNav ul li { flex-grow: 1; background: rgba(0,0,0,1); transition: all 0.15s ease-in-out; cursor: pointer; }
+.mainNav.open ul li { opacity: 1; transform: translateY(0); }
+.mainNav ul { display: flex; flex: 1; flex-direction: row; list-style: none; align-items: center; justify-content: center; text-align: center; margin: 0; padding: 0; height: 100vh; }
+.mainNav ul li { background: rgba(0,0,0,1); transition: all 0.15s ease-in-out; cursor: pointer; flex-wrap: wrap; transition: all 0.2s ease-in-out 0.15s; }
 .mainNav ul li.toggleSpacer { flex: 0 0 80px; }
 .mainNav ul li:hover { background: #000;}
 .mainNav ul li a { padding: 30px; width: 100%; height: 100%; display: inline-block; color: rgba(255,255,255,0.87); text-transform: uppercase; font-size: 2rem; font-weight: 400; letter-spacing: 3px; position: relative; line-height: 2rem; }
@@ -57,6 +59,10 @@ body[data-color="blue"] .mainNav { border-bottom-color: rgb(94,126,186); }
 body[data-color="green"] .mainNav ul li a i { color: rgb(117,117,0); }
 body[data-color="red"] .mainNav ul li a i { color: rgb(87,1,1); }
 body[data-color="blue"] .mainNav ul li a i { color: rgb(94,126,186); }
+
+@media(min-width: 951px){
+    .mainNav ul li { display: flex; flex: 1; }
+}
 
 @media(max-width: 950px){
     .mainNav ul { flex-direction: column; }

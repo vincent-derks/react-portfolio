@@ -28,8 +28,8 @@ class App extends Component {
 
     componentDidMount(){
         ParallaxInit()
-        const scene = document.getElementById('scene')
-        new Parallax(scene)
+        const scene = document.getElementById('scene'),
+              parallax = new Parallax(scene)
     }
 
     setRandomColor(){
