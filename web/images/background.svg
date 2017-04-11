@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 960 560" style="enable-background:new 0 0 960 560;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#88C7FF;}
+	.st1{opacity:0.6;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill:#3A3A3A;}
+	.st4{fill:#606060;}
+	.st5{fill:#71A87B;}
+	.st6{fill:#3474A5;}
+</style>
+<g id="sky">
+	<rect id="XMLID_1_" class="st0" width="960" height="560"/>
+	<g id="XMLID_19_" class="st1">
+		<circle id="XMLID_6_" class="st2" cx="154" cy="119" r="23.5"/>
+		<circle id="XMLID_10_" class="st2" cx="189" cy="111.5" r="23.5"/>
+		<circle id="XMLID_11_" class="st2" cx="190.2" cy="136.2" r="24.8"/>
+		<circle id="XMLID_12_" class="st2" cx="217.2" cy="121.8" r="15.2"/>
+	</g>
+	<g id="XMLID_20_" class="st1">
+		<circle id="XMLID_13_" class="st2" cx="815.5" cy="133.5" r="22"/>
+		<circle id="XMLID_14_" class="st2" cx="844.5" cy="158" r="24.5"/>
+		<circle id="XMLID_15_" class="st2" cx="833.2" cy="114.8" r="17.8"/>
+		<circle id="XMLID_16_" class="st2" cx="852.2" cy="136" r="21.2"/>
+		<circle id="XMLID_17_" class="st2" cx="879.5" cy="127" r="15.5"/>
+		<circle id="XMLID_18_" class="st2" cx="878.5" cy="150.5" r="14.5"/>
+	</g>
+	<g id="XMLID_22_" class="st1">
+		<circle id="XMLID_28_" class="st2" cx="563" cy="86" r="22"/>
+		<circle id="XMLID_27_" class="st2" cx="534" cy="61.5" r="24.5"/>
+		<circle id="XMLID_26_" class="st2" cx="545.2" cy="104.8" r="17.8"/>
+		<circle id="XMLID_25_" class="st2" cx="526.2" cy="83.5" r="21.2"/>
+		<circle id="XMLID_24_" class="st2" cx="499" cy="92.5" r="15.5"/>
+		<circle id="XMLID_23_" class="st2" cx="500" cy="69" r="14.5"/>
+	</g>
+</g>
+<g id="back-mountains">
+	<polygon id="XMLID_2_" class="st3" points="-14,479.8 83.7,344.2 118.5,347.7 179.5,274.3 278.2,442.6 442,255.7 485.8,322.7 
+		499,312.7 583.6,496 739,342.6 764.1,293.7 836.1,421.3 854.6,424 904.4,505.9 965,380.8 965,776 -14,776 	"/>
+</g>
+<g id="snow">
+	<polygon id="XMLID_3_" class="st2" points="178.5,282.5 165.5,298.5 230,369.5 	"/>
+	<polygon id="XMLID_5_" class="st2" points="442,263.5 476.5,317.5 434.5,271.5 	"/>
+	<polygon id="XMLID_7_" class="st2" points="492,323.5 497.5,319.5 509,343.5 	"/>
+	<polygon id="XMLID_8_" class="st2" points="764.5,305 817.5,400 758,317.5 	"/>
+</g>
+<g id="lower-mountains">
+	<polygon id="XMLID_9_" class="st4" points="-49.8,451 158.4,375.2 217.9,442.1 374.5,389.1 488.5,472 617.5,391 650,438 672,444 
+		727,481 902.2,448 983,486.5 983,788 -50,788 	"/>
+</g>
+<g id="green-hills">
+	<path id="XMLID_4_" class="st5" d="M-30.9,458c0,0,64.7-65.2,128.2-55.2s142.1,53.4,218.6,53.4s121.5-10.6,181-10.6s88,56,144,56
+		s104.3-45,169-45s205,65,205,65V811H-31L-30.9,458z"/>
+</g>
+<g id="river">
+	<path id="XMLID_21_" class="st6" d="M631.7,501.3c0,0,32.1,8.6,40.1,29.1S678,560,678,560h36c0,0-16-32-31-41s-42-17.5-42-17.5
+		L631.7,501.3z"/>
+</g>
+</svg>

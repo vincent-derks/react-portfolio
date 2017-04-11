@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import _ from 'lodash'
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk';
 
 // Components
 import App from './components/app'
@@ -17,12 +17,17 @@ import Contact from './components/contact'
 import rootReducer from './reducers'
 
 // Create the main store
-let store = createStore(rootReducer, window.devToolsExtension && window.devToolsExtension())
+let store = createStore(rootReducer, window.devToolsExtension && window.devToolsExtension(), applyMiddleware(thunk))
+
+// Fire on route change
+const routeChange = () => {
+
+}
 
 ReactDOM.render((
     <Provider store={store}>
         <Router history={browserHistory}>
-            <Route path="/" component={App}>
+            <Route path="/" component={App} onChange={routeChange}>
                 <IndexRoute component={Home}></IndexRoute>
                 <Route path="/work" component={Work}></Route>
                 <Route path="/about" component={About}></Route>

@@ -3,13 +3,7 @@ import _ from 'lodash'
 import { connect } from 'react-redux'
 import ReactTooltip from 'react-tooltip'
 
-@connect((state)=>{
-    return {
-        techniqueLogos: state.appReducer.techniqueLogos
-    }
-})
-
-export default class TechniqueList extends Component {
+class TechniqueList extends Component {
 
     getTechniqueLogo(technique){
         return this.props.techniqueLogos[technique]
@@ -27,3 +21,9 @@ export default class TechniqueList extends Component {
     }
 
 }
+
+export default connect(
+    state => ({
+        techniqueLogos: state.appReducer.techniqueLogos
+    })
+)(TechniqueList)

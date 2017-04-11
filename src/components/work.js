@@ -3,17 +3,7 @@ import { connect } from 'react-redux'
 import WorkItem from './workItem'
 import _ from 'lodash'
 
-@connect((state)=>{
-    return {
-        content: state.contentReducer.content.work
-    }
-})
-
-export default class Work extends Component {
-
-    toggleItem(event){
-        console.log('clicked')
-    }
+class Work extends Component {
 
     renderWork(){
         return this.props.content.map( item => {
@@ -32,3 +22,9 @@ export default class Work extends Component {
         )
     }
 }
+
+export default connect(
+    state => ({
+        content: state.contentReducer.content.work
+    })
+)(Work)
