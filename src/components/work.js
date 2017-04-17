@@ -13,11 +13,10 @@ class Work extends Component {
         })
     }
     render(){
-        const work = this.renderWork()
         return(
             <div>
                 <h1>A selection of my work</h1>
-                <ul className="workList">{work}</ul>
+                <ul className="workList">{this.renderWork()}</ul>
             </div>
         )
     }

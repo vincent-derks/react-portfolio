@@ -6,23 +6,23 @@ body { background-color: transparent; font-family: 'Roboto', sans-serif; height:
 #scene li { margin: 0; padding: 0; list-style: none; width: 100%; height: 100%; }
 #scene li div { transition: background-color 0.4s ease-in-out; background-blend-mode: multiply; background-image: url('images/background.jpg'); background-size: cover; background-repeat: no-repeat; background-position: bottom; height: 110%; width: 110%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
-body[data-color="green"] #scene li div { background-color: rgb(255,255,0); }
-body[data-color="red"] #scene li div { background-color: rgb(255,0,0); }
-body[data-color="blue"] #scene li div { background-color: rgb(255,255,255); }
+body[data-color="green"] #scene li div { background-color: rgba(255,255,0,0.3); }
+body[data-color="red"] #scene li div { background-color: rgba(255,0,0,0.3); }
+body[data-color="blue"] #scene li div { background-color: rgba(255,255,255,0.3); }
 
-.toggleMenu { font-size: 3rem; position: fixed; right: 0; padding: 2.5rem; line-height: 3rem; color: #fff; cursor: pointer; z-index: 9; transition: rotate 0.2s ease-in-out; }
+.toggleMenu { font-size: 2rem; position: fixed; right: 0; padding: 2.5rem; line-height: 3rem; color: #fff; cursor: pointer; z-index: 9; transition: rotate 0.2s ease-in-out; }
 .toggleMenu:hover .bar,
 .toggleMenu:hover:before,
 .toggleMenu:hover:after { background: #fff; }
-.toggleMenu .bar { background: #fff; height: 0.7rem; display: block; width: 5rem; top: 1rem; position: relative; border-radius: 3px; pointer-events: none; transition: all 0.2s ease-in-out; }
+.toggleMenu .bar { background: #fff; height: 0.4rem; display: block; width: 4rem; top: 0.70rem; position: relative; border-radius: 3px; pointer-events: none; transition: all 0.2s ease-in-out; }
 .toggleMenu:before,
-.toggleMenu:after { content: ''; position: relative; background: #fff; height: 0.7rem; display: block; width: 5rem; border-radius: 3px; transform-origin: center; transition: all 0.2s ease-in-out; }
+.toggleMenu:after { content: ''; position: relative; background: #fff; height: 0.4rem; display: block; width: 4rem; border-radius: 3px; transform-origin: center; transition: all 0.2s ease-in-out; }
 .toggleMenu:before { top: 0rem; }
-.toggleMenu:after { top: 2rem; }
+.toggleMenu:after { top: 1.5rem; }
 .toggleMenu.open { transform: rotate(359deg); }
 .toggleMenu.open .bar { opacity: 0; }
-.toggleMenu.open:before { transform: rotate(-45deg) translate(-1.4rem, 1.2rem);  }
-.toggleMenu.open:after { transform: rotate(45deg) translate(-1.2rem, -1rem); }
+.toggleMenu.open:before { transform: rotate(-45deg) translate(-1.0rem, 0.8rem);  }
+.toggleMenu.open:after { transform: rotate(45deg) translate(-0.8rem, -0.6rem); }
 
 @media(max-width: 700px){
     .toggleMenu { padding: 2rem; }
@@ -53,7 +53,7 @@ body[data-color="blue"] .mainNav { border-bottom-color: rgb(3, 217, 255); }
 .mainNav ul li a:hover,
 .mainNav ul li a:active,
 .mainNav ul li a:focus { text-decoration: none; }
-.mainNav ul li a i { transition: all 0.15s ease-in-out; color: rgba(255,255,255,0.08); font-size: 2em; position: relative; line-height: 2rem; top: 0.5rem; left: -2rem; }
+.mainNav ul li a i { transition: all 0.15s ease-in-out; color: rgba(255,255,255,0.08); font-size: 1em; position: relative; line-height: 2rem; top: 0rem; left: -2rem; }
 .mainNav ul li a:hover i { transform: translateX(0.5rem) rotate(-10deg); color: rgb(94, 126, 186); }
 
 body[data-color="green"] .mainNav ul li a i { color: rgb(158, 198, 0); }
@@ -65,7 +65,7 @@ body[data-color="blue"] .mainNav ul li a i { color: rgb(3, 217, 255); }
 }
 
 @media(max-width: 950px){
-    .mainNav ul { flex-direction: column; height: 100vh;}
+    .mainNav ul { flex-direction: column; height: calc(100vh - 5px);}
     .mainNav ul li.toggleSpacer { display: none; }
 }
 
@@ -80,7 +80,8 @@ body[data-color="blue"] .mainNav ul li a i { color: rgb(3, 217, 255); }
 }
 
 .workList { list-style: none; display: flex; padding: 0; justify-content: space-around; flex-direction: row; flex-wrap: wrap; }
-.workList > li { cursor: pointer; transition: all 0.2s ease-in-out; margin: 2em; box-shadow: 0px 1px 5px rgba(0,0,0,0.5); border-radius: 0 0 4px 4px; position: relative; border-bottom: 5px solid rgb(105,0,255); background: rgba(0,0,0,0.5); display: flex; flex-direction: column; transition: all 0.3s ease-in-out; width: calc(50% - 4em); }
+.workList > li { cursor: pointer; transition: all 0.2s ease-in-out; margin: 2em; box-shadow: 0px 1px 5px rgba(0,0,0,0.5); border-radius: 0 0 4px 4px;
+    position: relative; border-bottom: 5px solid rgb(105,0,255); background: rgba(0,0,0,0.5); display: flex; flex-direction: column; transition: all 0.3s ease-in-out; width: calc(50% - 4em); }
 body[data-color="green"] .workList > li { border-bottom-color: rgb(158, 198, 0); }
 body[data-color="red"] .workList > li { border-bottom-color: rgb(179, 0, 0); }
 body[data-color="blue"] .workList > li { border-bottom-color: rgb(3, 217, 255); }
@@ -97,6 +98,19 @@ body[data-color="blue"] .workList > li { border-bottom-color: rgb(3, 217, 255); 
 
 .lovesList { list-style: none; padding: 0; }
 
+.circle { z-index: 9; background: #fff; width: 0rem; height: 0rem; border-radius: 50%; position: absolute; transform: translate(-50%, -50%); }
+.circle.open { }
+body[data-color="green"] .circle { background-color: rgb(158, 198, 0); }
+body[data-color="red"] .circle { background-color: rgb(255, 156, 156); }
+body[data-color="blue"] .circle { background-color: rgb(3, 217, 255); }
+
+.workItemMoreContent { overflow: hidden; position: fixed; height: 100vh; width: 100vw; left: 0; top: 0; pointer-events: none; z-index: 9999; visibility: hidden; border: 2rem solid #000; }
+.workItemMoreContent.open { pointer-events: all; visibility: visible; }
+
+.moreContent { color: #000; opacity: 0; visibility: hidden; position: relative; display: flex; justify-content: center; align-items: center; flex-direction: column; flex: 1; height: calc(100vh - 4rem); padding: 20%; }
+.open .moreContent { opacity: 1; visibility: visible; z-index: 99; }
+.moreContent * { opacity: 0; transition: all 0.1s ease-in-out; transform: translateY(-10vh); }
+.open .moreContent * { opacity: 1; transform: translateY(0); transition: all 0.5s ease-in-out 0.2s; }
 
 @media(max-width: 950px){
     .workList { flex-direction: column; }
