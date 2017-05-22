@@ -8,6 +8,7 @@ import thunk from 'redux-thunk';
 // Components
 import App from './components/app'
 import Work from './components/work'
+import WorkSingle from './components/work-single'
 import NoMatch from './components/noMatch'
 import Home from './components/home'
 import About from './components/about'
@@ -30,6 +31,7 @@ ReactDOM.render((
             <Route path="/" component={App} onChange={routeChange}>
                 <IndexRoute component={Home}></IndexRoute>
                 <Route path="/work" component={Work}></Route>
+                <Route path="/work/:item" component={WorkSingle}></Route>
                 <Route path="/about" component={About}></Route>
                 <Route path="/contact" component={Contact}></Route>
                 <Route path="*" component={NoMatch}/>

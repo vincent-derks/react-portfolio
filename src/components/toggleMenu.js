@@ -8,7 +8,7 @@ import * as Actions from './../actions'
     }
 })
 
-class ToggleMenu extends Component {
+export default class ToggleMenu extends Component {
 
     toggleMenu(e){
         e.preventDefault()
@@ -23,8 +23,3 @@ class ToggleMenu extends Component {
 
 }
 
-export default connect(
-    state => ({
-        menuStatus: state.appReducer.menuOpen
-    })
-)(ToggleMenu)

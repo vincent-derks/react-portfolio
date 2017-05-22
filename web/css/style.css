@@ -1,16 +1,16 @@
 html, body { min-height: 100%; }
 
-body { background-color: transparent; font-family: 'Roboto', sans-serif; height: 100vh; max-height: 100vh; overflow-y: scroll; }
+body {  background-color: transparent; font-family: 'Roboto', sans-serif; height: 100vh; max-height: 100vh; overflow-y: scroll; }
 
 #scene { padding: 0; list-style: none; z-index: -1; position: fixed; width: 100vw; height: 100vh; margin-top: 0vh; }
 #scene li { margin: 0; padding: 0; list-style: none; width: 100%; height: 100%; }
-#scene li div { transition: background-color 0.4s ease-in-out; background-blend-mode: multiply; background-image: url('images/background.jpg'); background-size: cover; background-repeat: no-repeat; background-position: bottom; height: 110%; width: 110%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+#scene li div { background-image: url('../images/background.jpg'); transition: background-color 0.4s ease-in-out; background-blend-mode: multiply; background-size: cover; background-repeat: no-repeat; background-position: bottom; height: 110%; width: 110%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
 body[data-color="green"] #scene li div { background-color: rgba(255,255,0,0.3); }
 body[data-color="red"] #scene li div { background-color: rgba(255,0,0,0.3); }
 body[data-color="blue"] #scene li div { background-color: rgba(255,255,255,0.3); }
 
-.toggleMenu { font-size: 2rem; position: fixed; right: 0; padding: 2.5rem; line-height: 3rem; color: #fff; cursor: pointer; z-index: 9; transition: rotate 0.2s ease-in-out; }
+.toggleMenu { font-size: 2rem; position: fixed; right: 0; padding: 2.5rem; line-height: 3rem; color: #000; cursor: pointer; z-index: 9; transition: rotate 0.2s ease-in-out; }
 .toggleMenu:hover .bar,
 .toggleMenu:hover:before,
 .toggleMenu:hover:after { background: #fff; }
@@ -37,28 +37,28 @@ body[data-color="blue"] #scene li div { background-color: rgba(255,255,255,0.3);
 
 .mainNav { position: fixed; left: 0px; right: 0px; top: 0; transition: transform 0.2s ease-in-out, border-bottom-color 0.4s ease-in-out; border-bottom: 5px solid rgb(94, 126, 186); z-index: 1; will-change: transform, border-bottom-color; background: #000; }
 
-body[data-color="green"] .mainNav { border-bottom-color: rgb(158, 198, 0); }
-body[data-color="red"] .mainNav { border-bottom-color: rgb(179, 0, 0); }
-body[data-color="blue"] .mainNav { border-bottom-color: rgb(3, 217, 255); }
+body[data-color="green"] .mainNav { border-bottom-color: rgb(151, 159, 120); }
+body[data-color="red"] .mainNav { border-bottom-color: rgb(135, 91, 91); }
+body[data-color="blue"] .mainNav { border-bottom-color: rgb(95, 131, 138); }
 
 .mainNav.closed { transform: translateY(calc(-100% + 5px)); }
 .mainNav.closed ul li { opacity: 0; transform: translateY(-100%); transition: all 0.01s ease-in-out; transition-delay: 0s!important; }
 .mainNav.open { transform: translateY(0); }
 .mainNav.open ul li { opacity: 1; transform: translateY(0); }
 .mainNav ul { display: flex; flex: 1; flex-direction: row; list-style: none; align-items: center; justify-content: center; text-align: center; margin: 0; padding: 0; }
-.mainNav ul li { background: rgba(0,0,0,1); transition: all 0.15s ease-in-out; cursor: pointer; flex-wrap: wrap; transition: all 0.2s ease-in-out 0.15s; }
+.mainNav ul li { background: rgba(0,0,0,1); cursor: pointer; flex-wrap: wrap; transition: all 0.2s ease-in-out 0.15s; }
 .mainNav ul li.toggleSpacer { flex: 0 0 80px; }
-.mainNav ul li:hover { background: #000;}
-.mainNav ul li a { padding: 30px; width: 100%; height: 100%; display: inline-block; color: rgba(255,255,255,0.87); text-transform: uppercase; font-size: 2rem; font-weight: 400; letter-spacing: 3px; position: relative; line-height: 2rem; }
+.mainNav ul li:hover { background: #000; }
+.mainNav ul li a { padding: 30px; width: 100%; height: 100%; display: inline-block; color: rgba(255,255,2550,0.87); text-transform: uppercase; font-size: 2rem; font-weight: 400; letter-spacing: 3px; position: relative; line-height: 2rem; }
 .mainNav ul li a:hover,
 .mainNav ul li a:active,
 .mainNav ul li a:focus { text-decoration: none; }
 .mainNav ul li a i { transition: all 0.15s ease-in-out; color: rgba(255,255,255,0.08); font-size: 1em; position: relative; line-height: 2rem; top: 0rem; left: -2rem; }
 .mainNav ul li a:hover i { transform: translateX(0.5rem) rotate(-10deg); color: rgb(94, 126, 186); }
 
-body[data-color="green"] .mainNav ul li a i { color: rgb(158, 198, 0); }
-body[data-color="red"] .mainNav ul li a i { color: rgb(179, 0, 0); }
-body[data-color="blue"] .mainNav ul li a i { color: rgb(3, 217, 255); }
+body[data-color="green"] .mainNav ul li a i { color: rgb(151, 159, 120); }
+body[data-color="red"] .mainNav ul li a i { color: rgb(135, 91, 91); }
+body[data-color="blue"] .mainNav ul li a i { color: rgb(95, 131, 138); }
 
 @media(min-width: 951px){
     .mainNav ul li { display: flex; flex: 1; }
@@ -79,16 +79,24 @@ body[data-color="blue"] .mainNav ul li a i { color: rgb(3, 217, 255); }
     .mainContent { padding: 20px 10px 10px 10px; }
 }
 
+.logo { width: 500px; max-width: 80%; margin-bottom: 4rem; }
+.logo__static { width: 250px; max-width: 40%; position: fixed; top: 1rem; left: 2rem; }
+
 .workList { list-style: none; display: flex; padding: 0; justify-content: space-around; flex-direction: row; flex-wrap: wrap; }
 .workList > li { cursor: pointer; transition: all 0.2s ease-in-out; margin: 2em; box-shadow: 0px 1px 5px rgba(0,0,0,0.5); border-radius: 0 0 4px 4px;
     position: relative; border-bottom: 5px solid rgb(105,0,255); background: rgba(0,0,0,0.5); display: flex; flex-direction: column; transition: all 0.3s ease-in-out; width: calc(50% - 4em); }
-body[data-color="green"] .workList > li { border-bottom-color: rgb(158, 198, 0); }
-body[data-color="red"] .workList > li { border-bottom-color: rgb(179, 0, 0); }
-body[data-color="blue"] .workList > li { border-bottom-color: rgb(3, 217, 255); }
-.workList > li:hover {  }
+body[data-color="green"] .workList > li { border-bottom-color: rgb(151, 159, 120); }
+body[data-color="red"] .workList > li { border-bottom-color: rgb(135, 91, 91); }
+body[data-color="blue"] .workList > li { border-bottom-color: rgb(95, 131, 138); }
 .workList > li .thumbnail { display: flex; flex: 3; flex-grow: 3; border-radius: 0; border: none; overflow: hidden; border-bottom: 1px solid #eee; margin-bottom: 0; padding: 0; align-items: center;}
 .workList > li .thumbnail img { opacity: 0.6; transition: opacity 0.2s ease-in-out; }
 .workList > li:hover .thumbnail img { opacity: 1; }
+body[data-color="green"] .workList > li > a,
+body[data-color="red"] .workList > li > a,
+body[data-color="blue"] .workList > li > a { color: #fff; }
+body[data-color="green"] .workList > li > a:hover,
+body[data-color="red"] .workList > li > a:hover,
+body[data-color="blue"] .workList > li > a:hover { text-decoration: none; }
 
 .workItemContent { flex: 4; padding: 1rem; }
 
@@ -96,15 +104,18 @@ body[data-color="blue"] .workList > li { border-bottom-color: rgb(3, 217, 255); 
 .techniqueList li span { line-height: 1; font-size: 2.5rem; padding: 2rem 0; display: inline-block; color: rgba(255,255,255,0.3) }
 .techniqueList li:hover span { color: rgba(255,255,255,0.7); }
 
+@media(max-width: 952px){
+    .workList > li { width: calc(100% - 6rem); }
+}
+
 .lovesList { list-style: none; padding: 0; }
 
-.circle { z-index: 9; background: #fff; width: 0rem; height: 0rem; border-radius: 50%; position: absolute; transform: translate(-50%, -50%); }
-.circle.open { }
-body[data-color="green"] .circle { background-color: rgb(158, 198, 0); }
-body[data-color="red"] .circle { background-color: rgb(255, 156, 156); }
-body[data-color="blue"] .circle { background-color: rgb(3, 217, 255); }
+.circle { z-index: 9; background: transparent; width: 0rem; height: 0rem; position: absolute; }
+body[data-color="green"] .box path { fill: rgb(151, 159, 120); }
+body[data-color="red"] .box path { fill: rgb(135, 91, 91); }
+body[data-color="blue"] .box path { fill: rgb(95, 131, 138); }
 
-.workItemMoreContent { overflow: hidden; position: fixed; height: 100vh; width: 100vw; left: 0; top: 0; pointer-events: none; z-index: 9999; visibility: hidden; border: 2rem solid #000; }
+.workItemMoreContent { overflow: hidden; position: fixed; height: 100vh; width: 100vw; left: 0; top: 0; pointer-events: none; z-index: 9999; visibility: hidden; }
 .workItemMoreContent.open { pointer-events: all; visibility: visible; }
 
 .moreContent { color: #000; opacity: 0; visibility: hidden; position: relative; display: flex; justify-content: center; align-items: center; flex-direction: column; flex: 1; height: calc(100vh - 4rem); padding: 20%; }
@@ -116,8 +127,18 @@ body[data-color="blue"] .circle { background-color: rgb(3, 217, 255); }
     .workList { flex-direction: column; }
 }
 
+body[data-color="green"] .back-to-work,
+body[data-color="red"] .back-to-work,
+body[data-color="blue"] .back-to-work { position: absolute; top: 2rem; left: 50%; transform: translateX(-50%); color: #fff; }
+.back-to-work:hover { text-decoration: none; }
+.back-to-work i { transition: all 0.2s ease-in-out; }
+.back-to-work:hover i { transform: translateX(-0.5rem); }
+
+.item__logo { max-width: 300px; margin-bottom: 3rem; }
+
 /**** CUSTOM ICONS ****/
 .custom-icon:before { display: inline-block; opacity: 0.3; content: ''; background-repeat: no-repeat; width: 2.5rem; height: 2.5rem; background-size: 100% 100%; }
+.custom-icon:hover:before { opacity: 0.7; }
 
 /**** TOOLTIPS ****/
 .tooltip { background-color: rgba(0,0,0,0.4) !important; border-radius: 5px !important; opacity: 0 !important; margin-top: 0rem !important; transition: margin-top 0.1s ease-in-out, opacity 0.1s ease-in-out !important; font-family: 'Roboto', sans-serif; font-weight: 300; font-size: 1.1rem !important; }
@@ -126,15 +147,20 @@ body[data-color="blue"] .circle { background-color: rgb(3, 217, 255); }
 
 /**** TYPOGRAPHY ****/
 
-h1 { font-family: 'Meddon', cursive; font-style: normal; font-size: 5rem; margin-bottom: 5rem; color: #fff; }
+h1 { font-family: 'Open Sans', sans-serif; font-weight: 100; font-style: normal; font-size: 6rem; text-transform: uppercase; margin-bottom: 5rem; color: #fff; }
 body { color: #fff; -webkit-font-smoothing: antialiased; font-family: 'Open Sans', sans-serif; font-weight: 100; font-size: 2rem; }
+
+body[data-color="green"] a { color: rgb(151, 159, 120); }
+body[data-color="red"] a { color: rgb(135, 91, 91); }
+body[data-color="blue"] a { color: rgb(95, 131, 138); }
 
 @media( max-width: 1024px ){
     body { font-size: 16px; }
 }
 
 @media( max-width: 400px ){
-    h1 { font-size: 2.3rem; }
+    h1 { font-size: 4rem; }
+    h1, h2, h3, h4, h5, h6 { padding: 0 2rem; }
 }
 
 /**** REACT CSS TRANSITIONS ****/

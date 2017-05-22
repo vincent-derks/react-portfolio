@@ -7,7 +7,7 @@ if(prod){
     module.exports = {
         entry: './src/index.js',
         output: {
-            path: './web/',
+            path: './web/js/',
             filename: 'bundle.js'
         },
         module: {
@@ -51,7 +51,7 @@ if(prod){
     module.exports = {
         entry: './src/index.js',
         output: {
-            path: './web/',
+            path: './web/js/',
             filename: 'bundle.js'
         },
         module: {

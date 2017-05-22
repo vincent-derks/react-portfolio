@@ -9,7 +9,13 @@ import ParallaxInit from './../libs/parallax'
 import ToggleMenu from './toggleMenu'
 import MainNavigation from './mainNavigation'
 
-class App extends Component {
+@connect(state => {
+    return {
+        content: state.content
+    }
+})
+
+export default class App extends Component {
 
     constructor(props){
         super(props)
@@ -66,9 +72,3 @@ class App extends Component {
     }
 
 }
-
-export default connect(
-    state => ({
-        content: state.content
-    })
-)(App)

@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-@connect((state, ownProps) => {
+import Logo from './logo'
+
+@connect(state => {
     return {
         about: state.contentReducer.content.about
     }
@@ -13,8 +15,9 @@ export default class About extends Component {
         if(about){
             return (
                 <div>
+                    <Logo/>
                     <h1>{about.title}</h1>
-                    {about.content}
+                    <p dangerouslySetInnerHTML={{ __html: about.content}} />
                 </div>
             )
         }
