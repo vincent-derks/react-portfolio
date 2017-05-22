@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import _ from 'lodash'
 import TechniqueList from './techniqueList'
 import { Link } from 'react-router'
-import slug from 'slug'
 
 export default class WorkItem extends Component {
 
