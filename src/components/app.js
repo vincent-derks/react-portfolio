@@ -63,7 +63,7 @@ export default class App extends Component {
                     <ToggleMenu />
                     <MainNavigation />
                     <div className="mainContent">
-                        <ReactCSSTransitionGroup transitionName="mainContentWrapper" transitionEnterTimeout={0} transitionAppearTimeout={0} transitionLeaveTimeout={200000} >
+                        <ReactCSSTransitionGroup transitionName="mainContentWrapper" transitionEnterTimeout={0} transitionAppearTimeout={0} transitionLeaveTimeout={200} >
                             {React.cloneElement(this.props.children, { key: _.uniqueId() })}
                         </ReactCSSTransitionGroup>
                     </div>
