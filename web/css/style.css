@@ -84,7 +84,7 @@ body[data-color="blue"] .mainNav ul li a i { color: rgb(95, 131, 138); }
 
 /**** MAIN CONTENT AREA ****/
 
-.mainContent { text-align: center; position: fixed; border-radius: 10px; top: 100px; height: calc(100vh - 100px); width: 100%; overflow-y: scroll; }
+.mainContent { text-align: center; position: fixed; border-radius: 10px; top: 100px; height: calc(100vh - 100px); width: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; }
 .mainContent > span { padding: 50px; max-width: 1024px; margin: 0 auto; display: block!important; }
 
 @media(max-width: 950px){
