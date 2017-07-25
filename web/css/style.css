@@ -1,6 +1,10 @@
+/**** GENERAL STYLES ****/
+
 html, body { min-height: 100%; }
 
 body {  background-color: transparent; font-family: 'Roboto', sans-serif; height: 100vh; max-height: 100vh; overflow-y: scroll; }
+
+/**** SCENE SETUP ****/
 
 #scene { padding: 0; list-style: none; z-index: -1; position: fixed; width: 100vw; height: 100vh; margin-top: 0vh; }
 #scene li { margin: 0; padding: 0; list-style: none; width: 100%; height: 100%; }
@@ -9,6 +13,11 @@ body {  background-color: transparent; font-family: 'Roboto', sans-serif; height
 body[data-color="green"] #scene li div { background-color: rgba(255,255,0,0.3); }
 body[data-color="red"] #scene li div { background-color: rgba(255,0,0,0.3); }
 body[data-color="blue"] #scene li div { background-color: rgba(255,255,255,0.3); }
+
+/**** HEADER & MAIN NAVIGATION ****/
+
+.logo { width: 500px; max-width: 80%; margin-bottom: 4rem; }
+.logo__static { width: 250px; max-width: 40%; position: fixed; top: 1rem; left: 2rem; }
 
 .toggleMenu { font-size: 2rem; position: fixed; right: 0; padding: 2.5rem; line-height: 3rem; color: #000; cursor: pointer; z-index: 9; transition: rotate 0.2s ease-in-out; }
 .toggleMenu:hover .bar,
@@ -46,8 +55,8 @@ body[data-color="blue"] .mainNav { border-bottom-color: rgb(95, 131, 138); }
 .mainNav.open { transform: translateY(0); }
 .mainNav.open ul li { opacity: 1; transform: translateY(0); }
 .mainNav ul { display: flex; flex: 1; flex-direction: row; list-style: none; align-items: center; justify-content: center; text-align: center; margin: 0; padding: 0; }
+.mainNav ul:after { content: ''; flex: 0 0 80px; }
 .mainNav ul li { background: rgba(0,0,0,1); cursor: pointer; flex-wrap: wrap; transition: all 0.2s ease-in-out 0.15s; }
-.mainNav ul li.toggleSpacer { flex: 0 0 80px; }
 .mainNav ul li:hover { background: #000; }
 .mainNav ul li a { padding: 30px; width: 100%; height: 100%; display: inline-block; color: rgba(255,255,2550,0.87); text-transform: uppercase; font-size: 2rem; font-weight: 400; letter-spacing: 3px; position: relative; line-height: 2rem; }
 .mainNav ul li a:hover,
@@ -60,27 +69,33 @@ body[data-color="green"] .mainNav ul li a i { color: rgb(151, 159, 120); }
 body[data-color="red"] .mainNav ul li a i { color: rgb(135, 91, 91); }
 body[data-color="blue"] .mainNav ul li a i { color: rgb(95, 131, 138); }
 
+@media(min-width: 951px) and (max-width: 1070px){
+    .mainNav ul li a { font-size: 1.5rem;}
+}
+
 @media(min-width: 951px){
     .mainNav ul li { display: flex; flex: 1; }
 }
 
 @media(max-width: 950px){
     .mainNav ul { flex-direction: column; height: calc(100vh - 5px);}
-    .mainNav ul li.toggleSpacer { display: none; }
+    .mainNav ul:after { display: none; }
 }
 
-.mainContent { text-align: center; padding: 50px; max-width: 1024px; margin: 0 auto; position: relative; border-radius: 10px; top: 100px; }
+/**** MAIN CONTENT AREA ****/
+
+.mainContent { text-align: center; position: fixed; border-radius: 10px; top: 100px; height: calc(100vh - 100px); width: 100%; overflow-y: scroll; }
+.mainContent > span { padding: 50px; max-width: 1024px; margin: 0 auto; display: block!important; }
 
 @media(max-width: 950px){
-    .mainContent { padding: 50px 10px 10px 10px; }
+    .mainContent > span { padding: 50px 10px 10px 10px; }
 }
 
 @media(max-width: 600px){
-    .mainContent { padding: 20px 10px 10px 10px; }
+    .mainContent > span { padding: 20px 10px 10px 10px; }
 }
 
-.logo { width: 500px; max-width: 80%; margin-bottom: 4rem; }
-.logo__static { width: 250px; max-width: 40%; position: fixed; top: 1rem; left: 2rem; }
+/**** WORK ITEMS ****/
 
 .workList { list-style: none; display: flex; padding: 0; justify-content: space-around; flex-direction: row; flex-wrap: wrap; }
 .workList > li { cursor: pointer; transition: all 0.2s ease-in-out; margin: 2em; box-shadow: 0px 1px 5px rgba(0,0,0,0.5); border-radius: 0 0 4px 4px;
@@ -108,13 +123,6 @@ body[data-color="blue"] .workList > li > a:hover { text-decoration: none; }
     .workList > li { width: calc(100% - 6rem); }
 }
 
-.lovesList { list-style: none; padding: 0; }
-
-.circle { z-index: 9; background: transparent; width: 0rem; height: 0rem; position: absolute; }
-body[data-color="green"] .box path { fill: rgb(151, 159, 120); }
-body[data-color="red"] .box path { fill: rgb(135, 91, 91); }
-body[data-color="blue"] .box path { fill: rgb(95, 131, 138); }
-
 .workItemMoreContent { overflow: hidden; position: fixed; height: 100vh; width: 100vw; left: 0; top: 0; pointer-events: none; z-index: 9999; visibility: hidden; }
 .workItemMoreContent.open { pointer-events: all; visibility: visible; }
 
@@ -127,20 +135,32 @@ body[data-color="blue"] .box path { fill: rgb(95, 131, 138); }
     .workList { flex-direction: column; }
 }
 
-body[data-color="green"] .back-to-work,
-body[data-color="red"] .back-to-work,
-body[data-color="blue"] .back-to-work { position: absolute; top: 2rem; left: 50%; transform: translateX(-50%); color: #fff; }
+body .mainContent .back-to-work { position: absolute; top: 2rem; left: 50%; transform: translateX(-50%); color: #fff; }
 .back-to-work:hover { text-decoration: none; }
 .back-to-work i { transition: all 0.2s ease-in-out; }
 .back-to-work:hover i { transform: translateX(-0.5rem); }
 
+@media(max-width: 650px){
+    body .mainContent .back-to-work { top: 0rem; }
+}
+
 .item__logo { max-width: 300px; margin-bottom: 3rem; }
 
+/**** CONTACT FORM ****/
+
+.form-control { background-color: #111; border-color: #010101; border-radius: 0; margin-bottom: 2rem; padding: 2rem; }
+button { background-color: #111; border: 1px solid #000; border-bottom: 2px solid #000; color: #FFF; padding: 1rem 2rem; }
+body[data-color="green"] button { border-bottom-color: rgb(151, 159, 120); }
+body[data-color="red"] button { border-bottom-color: rgb(135, 91, 91); }
+body[data-color="blue"] button { border-bottom-color: rgb(95, 131, 138); }
+
 /**** CUSTOM ICONS ****/
+
 .custom-icon:before { display: inline-block; opacity: 0.3; content: ''; background-repeat: no-repeat; width: 2.5rem; height: 2.5rem; background-size: 100% 100%; }
 .custom-icon:hover:before { opacity: 0.7; }
 
 /**** TOOLTIPS ****/
+
 .tooltip { background-color: rgba(0,0,0,0.4) !important; border-radius: 5px !important; opacity: 0 !important; margin-top: 0rem !important; transition: margin-top 0.1s ease-in-out, opacity 0.1s ease-in-out !important; font-family: 'Roboto', sans-serif; font-weight: 300; font-size: 1.1rem !important; }
 .tooltip:after { border-top-color: rgba(0,0,0,0.4) !important; }
 .tooltip.show { opacity: 0.5 !important; margin-top: 1rem !important; }
@@ -148,14 +168,16 @@ body[data-color="blue"] .back-to-work { position: absolute; top: 2rem; left: 50%
 /**** TYPOGRAPHY ****/
 
 h1 { font-family: 'Open Sans', sans-serif; font-weight: 100; font-style: normal; font-size: 6rem; text-transform: uppercase; margin-bottom: 5rem; color: #fff; }
-body { color: #fff; -webkit-font-smoothing: antialiased; font-family: 'Open Sans', sans-serif; font-weight: 100; font-size: 2rem; }
+p { margin: 0 0 3rem; }
+body { color: #fff; -webkit-font-smoothing: antialiased; font-family: 'Open Sans', sans-serif; font-weight: 100; font-size: 2rem; line-height: 3.5rem; }
 
 body[data-color="green"] a { color: rgb(151, 159, 120); }
 body[data-color="red"] a { color: rgb(135, 91, 91); }
 body[data-color="blue"] a { color: rgb(95, 131, 138); }
 
 @media( max-width: 1024px ){
-    body { font-size: 16px; }
+    body { font-size: 16px; line-height: 3rem; }
+    p { margin: 0 0 2rem; }
 }
 
 @media( max-width: 400px ){
@@ -164,10 +186,12 @@ body[data-color="blue"] a { color: rgb(95, 131, 138); }
 }
 
 /**** REACT CSS TRANSITIONS ****/
+
 .mainContentWrapper-enter { opacity: 0; margin: 0 auto; width: 100%; max-width: 1024px; }
 .mainContentWrapper-enter.mainContentWrapper-enter-active { opacity: 1; transition: opacity 200ms ease-in 0.2s; }
-.mainContentWrapper-leave { opacity: 1; position: absolute; padding: 50px; top: 0; left: 0; margin: 0 auto; width: 100%; max-width: 1024px; }
+.mainContentWrapper-leave { opacity: 1; position: absolute; transform: translateX(-50%); padding: 50px; top: 0; left: 50%; margin: 0 auto; width: 100%; max-width: 1024px; }
 .mainContentWrapper-leave.mainContentWrapper-leave-active { opacity: 0; transition: opacity 200ms ease-in; }
+.mainContentWrapper-leave .logo__static { display: none; }
 
 @media(max-width: 950px){
     .mainContentWrapper-leave { padding: 50px 10px 10px 10px; }
