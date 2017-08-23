@@ -47,6 +47,8 @@ export default class App extends Component {
 
     render(){
         this.setRandomColor()
+        window.scrollTo(0, 0)
+        document.body.scrollTop = 0;
         return(
             <ReactCSSTransitionGroup
                 transitionName="loadPage"

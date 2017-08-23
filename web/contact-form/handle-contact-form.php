@@ -9,4 +9,4 @@ $mail_content = 'Message: '.$message.'
 Name: '.$name.'
 Email: '.$email;
 
-echo mail('vincent.derks@gmail.com', 'Contact form vderks.online', $mail_content);
+echo json_encode(mail('vincent.derks@gmail.com', 'Contact form vderks.online', $mail_content));

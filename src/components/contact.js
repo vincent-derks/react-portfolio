@@ -26,7 +26,7 @@ export default class Contact extends Component {
         const formData = this.state.form
         axios.post('/contact-form/handle-contact-form.php', formData)
         .then(response => {
-            console.log(response.data)
+            if(response.data == true) this.props.router.push('/thanks')
         })
     }
 
