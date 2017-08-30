@@ -95,6 +95,9 @@ body[data-color="blue"] .mainNav ul li a i { color: rgb(95, 131, 138); }
     .mainContent > span { padding: 20px 10px 10px 10px; }
 }
 
+.skill-list { list-style: none; padding: 0; margin: 0; }
+.skill-list li:before { content: '\f00c'; font-family: 'FontAwesome', sans-serif; opacity: 0.3; font-size: 0.8em; left: -1rem; display: inline-block; position: relative; }
+
 /**** WORK ITEMS ****/
 
 .workList { list-style: none; display: flex; padding: 0; justify-content: space-around; flex-direction: row; flex-wrap: wrap; }
@@ -103,7 +106,7 @@ body[data-color="blue"] .mainNav ul li a i { color: rgb(95, 131, 138); }
 body[data-color="green"] .workList > li { border-bottom-color: rgb(151, 159, 120); }
 body[data-color="red"] .workList > li { border-bottom-color: rgb(135, 91, 91); }
 body[data-color="blue"] .workList > li { border-bottom-color: rgb(95, 131, 138); }
-.workList > li .thumbnail { display: flex; flex: 3; flex-grow: 3; border-radius: 0; border: none; overflow: hidden; border-bottom: 1px solid #eee; margin-bottom: 0; padding: 0; align-items: center;}
+.workList > li .thumbnail { display: flex; flex: 3; flex-grow: 3; border-radius: 0; border: none; overflow: hidden; border-bottom: 1px solid #eee; margin-bottom: 0; padding: 0; align-items: center; }
 .workList > li .thumbnail img { opacity: 0.6; transition: opacity 0.2s ease-in-out; }
 .workList > li:hover .thumbnail img { opacity: 1; }
 body[data-color="green"] .workList > li > a,
@@ -144,7 +147,7 @@ body .mainContent .back-to-work { position: absolute; top: 2rem; left: 50%; tran
     body .mainContent .back-to-work { top: 0rem; }
 }
 
-.item__logo { max-width: 300px; margin-bottom: 3rem; }
+.item__logo { max-width: 300px; margin-bottom: 3rem; background: #fff; padding: 2rem; border-radius: 5px; }
 
 /**** CONTACT FORM ****/
 

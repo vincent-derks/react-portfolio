@@ -7,14 +7,16 @@ import Logo from './logo'
 
 @connect(state => {
     return {
-        content: state.contentReducer.content.work
+        title: state.contentReducer.content.work.title,
+        content: state.contentReducer.content.work.content,
+        workItems: state.contentReducer.content.work.workItems
     }
 })
 
 export default class Work extends Component {
 
     renderWork(){
-        return this.props.content.map( (item, i) => {
+        return this.props.workItems.map( (item, i) => {
             return <WorkItem index={i} key={'workItem_'+i} item={item} />
         })
     }
@@ -22,7 +24,8 @@ export default class Work extends Component {
         return(
             <div>
                 <Logo />
-                <h1>A selection of my work</h1>
+                <h1>{this.props.title}</h1>
+                {this.props.content}
                 <ul className="workList">{this.renderWork()}</ul>
             </div>
         )

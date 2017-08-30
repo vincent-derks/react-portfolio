@@ -13,7 +13,7 @@ export default class WorkItem extends Component {
                 <Link to={`/work/${item.slug}`} className="workItemWrapper">
                     <div className="workItemContent">
                         <h3>{item.title}</h3>
-                        <div dangerouslySetInnerHTML={{ __html: item.content}}/>
+                        <div dangerouslySetInnerHTML={{ __html: item.short_content}}/>
                     </div>
                     <TechniqueList techniques={item.techniques} />
                 </Link>

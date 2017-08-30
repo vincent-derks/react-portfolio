@@ -6,7 +6,7 @@ import Logo from './logo'
 
 @connect((state, ownProps)=>{
     return {
-        items: state.contentReducer.content.work.filter(item => item.slug == ownProps.params.item)
+        items: state.contentReducer.content.work.workItems.filter(item => item.slug == ownProps.params.item)
     }
 })
 
@@ -25,6 +25,7 @@ export default class WorkSinlge extends Component {
                     <h1>{item.title}</h1>
                     <img className="item__logo" src={'/'+item.logo} />
                     <div dangerouslySetInnerHTML={{ __html: item.content}} />
+                    {item.link && <Link target="_blank" to={item.link}>Visit the website</Link>}
                 </div>
             )
         }

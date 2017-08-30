@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
 import { Provider } from 'react-redux'
-import { createStore, applyMiddleware } from 'redux'
-import thunk from 'redux-thunk';
+import { createStore } from 'redux'
 
 // Components
 import App from './components/app'
@@ -19,7 +18,7 @@ import Thanks from './components/thanks'
 import rootReducer from './reducers'
 
 // Create the main store
-let store = createStore(rootReducer, window.devToolsExtension && window.devToolsExtension(), applyMiddleware(thunk))
+let store = createStore(rootReducer, window.devToolsExtension && window.devToolsExtension())
 
 // Fire on route change
 const routeChange = () => document.querySelector('.mainContent').scrollTop = 0
