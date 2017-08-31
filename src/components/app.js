@@ -24,7 +24,7 @@ export default class App extends Component {
 
     componentWillMount(){
         const preloader = document.getElementById('preloader-wrapper')
-        preloader.classList = 'fadeOut'
+        preloader.classList.add('fadeOut')
         setTimeout(()=>{
             preloader.parentNode.removeChild(preloader)
         }, 500)
