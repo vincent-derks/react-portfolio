@@ -53,8 +53,8 @@ const Data = {
         "logo" : "images/ba-logo.png",
         "slug" : "ba-groep",
         "techniques" : ["wordpress", "javascript"],
-        "short_content" : "Custom WordPress template for a large implementation and advisory organization in the social domain",
-        "content" : "<p>While working at WebEngine I was responsible for building a new WordPress powered website for B&A Group.</p><p>The structure of this website made us do some heavy changes on the standard WordPress routing and rewrites, and was therefore a challenging project. Lots of different Custom Post Types and custom fields. This template is also build using Timber/Twig, and therefore gave me the opportunity to build a super clean template codebase. The outcome is a very happy client, and a nice looking modern WordPress website.</p>",
+        "short_content" : "Custom WordPress template",
+        "content" : "<p>While working at WebEngine I was responsible for building a new WordPress powered website for B&A Group. It's a large Implementation and Advisory Organization in the social domain</p><p>The structure of this website made us do some heavy changes on the standard WordPress routing and rewrites, and was therefore a challenging project. Lots of different Custom Post Types and custom fields. This template is also build using Timber/Twig, and therefore gave me the opportunity to build a super clean template codebase. The outcome is a very happy client, and a nice looking modern WordPress website.</p>",
         "title" : "B&A Groep",
         "link" : "https://bagroep.nl"
       }, {
@@ -65,6 +65,14 @@ const Data = {
         "content" : "<p>Moboption.com is a digital option platform. You can gain profit by trading with stocks, commodities, indices and currencies.</p><p>While working at WebEngine I was responsible for building MobOption a new WordPress website, including a custom theme and several custom build plugins. All of this is based on the <a href='https://github.com/roots/bedrock' target='_blank'>Bedrock</a> structure. Therefore it allows me to easily maintain a Git-repo, do depencency management with Composer (including WP Core and Plugins), use Dotenv for environment variables, and it gives better security through a completely different folder structure. Most of my WordPress themes are using Timber, so we can utilize the advantages of the amazing templating engine Twig.</p><p>In this project we heavily used the WP REST API and other API's.</p>",
         "title" : "Moboption",
         "link" : "https://www.moboption.com"
+      }, {
+        "logo" : "images/vincent-derks-dark.svg",
+        "slug" : "vderks-online",
+        "techniques" : ["javascript", "react", "redux"],
+        "short_content" : "My own portfolio website",
+        "content" : "<p>Of course, my own portfolio can't be missing from my projects. You're visiting the website right now, but I'd like to explain a little bit about the techniques behind this website.</p><p>The website is build using React, React Router and Redux. No CMS behind this one, just plain old JSON data. The code for this project can be found on Github on the link below.</p>",
+        "title" : "This portfolio",
+        "link" : "https://github.com/vincent-derks/react-portfolio"
       } ]
     }
   }
