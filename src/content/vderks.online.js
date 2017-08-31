@@ -73,6 +73,14 @@ const Data = {
         "content" : "<p>Of course, my own portfolio can't be missing from my projects. You're visiting the website right now, but I'd like to explain a little bit about the techniques behind this website.</p><p>The website is build using React, React Router and Redux. No CMS behind this one, just plain old JSON data. The code for this project can be found on Github on the link below.</p>",
         "title" : "This portfolio",
         "link" : "https://github.com/vincent-derks/react-portfolio"
+      }, {
+        "logo" : "images/bagels-beans-logo.png",
+        "slug" : "bagels-beans",
+        "techniques" : ["symfony", "php"],
+        "short_content" : "Symfony based website, intranet & order-system",
+        "content" : "<p>Bagels & Beans, the best bagels in the Netherlands. With over 70 locations in the Netherlands (and one in Germany), Bagels & Beans is serving great bagels to a lot of people.</p><p>While working at WebEngine, I was responsible for a redesign & support for all of their frontend. At WebEngine we build them a website, ordering system and a intranet for their frenchises.</p><p>The whole system is build on top of a Symfony 2 / Sylius system. The frontend heavily relies on a lot of Javascript.</p>",
+        "title" : "Bagels & Beans",
+        "link" : "https://www.bagelsbeans.nl"
       } ]
     }
   }
