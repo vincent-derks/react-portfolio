@@ -50,7 +50,7 @@ body[data-color="green"] .mainNav { border-bottom-color: rgb(151, 159, 120); }
 body[data-color="red"] .mainNav { border-bottom-color: rgb(135, 91, 91); }
 body[data-color="blue"] .mainNav { border-bottom-color: rgb(95, 131, 138); }
 
-.mainNav.closed { transform: translateY(calc(-100% + 5px)); }
+.mainNav.closed { transform: translateY(-100%) translateY(5px); }
 .mainNav.closed ul li { opacity: 0; transform: translateY(-100%); transition: all 0.01s ease-in-out; transition-delay: 0s!important; }
 .mainNav.open { transform: translateY(0); }
 .mainNav.open ul li { opacity: 1; transform: translateY(0); }
