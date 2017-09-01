@@ -60,7 +60,7 @@ export default class App extends Component {
                 transitionLeaveTimeout={0}
             >
                 <ul id="scene">
-                    <li className="layer" data-depth="0.20"><div/></li>
+                    <li className="layer" data-depth="0.10"><div/></li>
                 </ul>
                     <ToggleMenu />
                     <MainNavigation />
