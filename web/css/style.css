@@ -23,14 +23,14 @@ body[data-color="blue"] #scene li div { background-color: rgba(255,255,255,0.3);
 .toggleMenu:hover .bar,
 .toggleMenu:hover:before,
 .toggleMenu:hover:after { background: #fff; }
-.toggleMenu .bar { background: #fff; height: 0.4rem; display: block; width: 4rem; top: 0.70rem; position: relative; border-radius: 3px; pointer-events: none; transition: all 0.2s ease-in-out; transform-origin: center right; }
+.toggleMenu .bar { background: #fff; height: 0.4rem; display: block; width: 4rem; top: 0.70rem; position: relative; border-radius: 3px; pointer-events: none; transition: all 0.2s ease-in-out; }
 .toggleMenu:before,
-.toggleMenu:after { content: ''; position: relative; background: #fff; height: 0.4rem; display: block; width: 4rem; border-radius: 3px; transform-origin: center; transition: all 0.2s ease-in-out; transform-origin: center right; }
+.toggleMenu:after { content: ''; position: relative; background: #fff; height: 0.4rem; display: block; width: 4rem; border-radius: 3px; transform-origin: center; transition: all 0.2s ease-in-out; }
 .toggleMenu:before { top: 0rem; }
 .toggleMenu:after { top: 1.5rem; }
 .toggleMenu.open .bar { opacity: 0; }
-.toggleMenu.open:before { transform: translateY(-0.25rem) rotate(-45deg); }
-.toggleMenu.open:after { transform: translateY(0.25rem) rotate(45deg); }
+.toggleMenu.open:before { transform: rotate(-45deg) translate(-1.0rem, 0.8rem);  }
+.toggleMenu.open:after { transform: rotate(45deg) translate(-0.8rem, -0.6rem); }
 
 @media(max-width: 700px){
     .toggleMenu { padding: 2rem; }
