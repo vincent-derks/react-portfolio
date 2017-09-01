@@ -26,13 +26,6 @@ const Data = {
       "title" : "A selection of my work",
       "content" : "On this page you'll find a selection of my past work. There are several projects I'm really proud of, but can't show off here due to client-restrictions. I will gladly explain a little bit more about these projects or showcase them in a personal talk.",
       "workItems" : [ 
-      //   {
-      //   "logo" : "images/randstad-logo.png",
-      //   "slug" : "randstad",
-      //   "techniques" : [ "symfony", "javascript", "twig" ],
-      //   "content" : "The client wanted us to build an intelligence test. Fast, stable, should work seamless across a broad spectrum of devices and impossible to cheat.",
-      //   "title" : "Randstad Intelligence Test"
-      // }, 
       {
         "logo" : "images/snurk-logo.jpg",
         "slug" : "snurk",
@@ -78,7 +71,7 @@ const Data = {
         "slug" : "bagels-beans",
         "techniques" : ["symfony", "php"],
         "short_content" : "Symfony based website, intranet & order-system",
-        "content" : "<p>Bagels & Beans, the best bagels in the Netherlands. With over 70 locations in the Netherlands (and one in Germany), Bagels & Beans is serving great bagels to a lot of people.</p><p>While working at WebEngine, I was responsible for a redesign & support for all of their frontend. At WebEngine we build them a website, ordering system and a intranet for their frenchises.</p><p>The whole system is build on top of a Symfony 2 / Sylius system. The frontend heavily relies on a lot of Javascript.</p>",
+        "content" : "<p>Bagels & Beans, the best bagels in the Netherlands. With over 70 locations in the Netherlands (and one in Germany), Bagels & Beans is serving great bagels to a lot of people.</p><p>While working at WebEngine, I was responsible for a redesign & support for all of their frontend. At WebEngine we built them a website, ordering system and a intranet for their franchises.</p><p>The whole system is build on top of a Symfony 2 / Sylius system. The frontend heavily relies on a lot of Javascript.</p>",
         "title" : "Bagels & Beans",
         "link" : "https://www.bagelsbeans.nl"
       } ]
