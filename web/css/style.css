@@ -28,7 +28,7 @@ body[data-color="blue"] #scene li div { background-color: rgba(255,255,255,0.3);
 .toggleMenu:after { content: ''; position: relative; background: #fff; height: 0.4rem; display: block; width: 4rem; border-radius: 3px; transform-origin: center; transition: all 0.2s ease-in-out; }
 .toggleMenu:before { top: 0rem; }
 .toggleMenu:after { top: 1.5rem; }
-.toggleMenu.open { transform: rotate(359deg); }
+.toggleMenu.open { transform: rotate(90deg); }
 .toggleMenu.open .bar { opacity: 0; }
 .toggleMenu.open:before { transform: rotate(-45deg) translate(-1.0rem, 0.8rem);  }
 .toggleMenu.open:after { transform: rotate(45deg) translate(-0.8rem, -0.6rem); }
