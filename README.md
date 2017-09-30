@@ -4,7 +4,7 @@
 `npm install`
 
 ## Build dev
-`webpack`
+`npm start`
 
 ## Build production
-`webpack -p`
+`npm run-script build`
