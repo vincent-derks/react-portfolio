@@ -1,13 +1,13 @@
-const prod = process.argv.indexOf('-p') !== -1;
+const prod = process.argv.indexOf('-p') !== -1
 
 if(prod){
 
     var webpack = require('webpack');
 
     module.exports = {
-        entry: './src/index.js',
+        entry: __dirname + '/client/index.js',
         output: {
-            path: './web/js/',
+            path: __dirname + '/web/js',
             filename: 'bundle.js'
         },
         module: {
@@ -15,14 +15,10 @@ if(prod){
                 {
                     test: /\.js$/,
                     exclude: /node_modules/,
-                    loader: 'babel',
+                    loader: 'babel-loader',
                     query: {
                         babelrc: false,
-                        presets: [
-                            'es2015',
-                            'stage-0',
-                            'react'
-                        ],
+                        presets: ['env', 'react'],
                         plugins: [
                             'transform-decorators-legacy',
                             'transform-object-rest-spread'
@@ -49,9 +45,9 @@ if(prod){
 } else {
 
     module.exports = {
-        entry: './src/index.js',
+        entry: __dirname + '/client/index.js',
         output: {
-            path: './web/js/',
+            path: __dirname + '/web/js',
             filename: 'bundle.js'
         },
         module: {
@@ -59,14 +55,10 @@ if(prod){
                 {
                     test: /\.js$/,
                     exclude: /node_modules/,
-                    loader: 'babel',
+                    loader: 'babel-loader',
                     query: {
                         babelrc: false,
-                        presets: [
-                            'es2015',
-                            'stage-0',
-                            'react'
-                        ],
+                        presets: ['env', 'react'],
                         plugins: [
                             'transform-decorators-legacy',
                             'transform-object-rest-spread'
