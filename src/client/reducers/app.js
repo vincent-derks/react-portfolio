@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
     menuOpen: false,
     techniqueLogos: {
         'react'         : 'devicons devicons-react',

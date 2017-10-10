@@ -2,18 +2,11 @@ import React, { Component } from 'react'
 import _ from 'lodash'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import * as Actions from './../actions'
-import { connect } from 'react-redux'
 import ParallaxInit from './../libs/parallax'
 
 // Components
 import ToggleMenu from './toggleMenu'
 import MainNavigation from './mainNavigation'
-
-@connect(state => {
-    return {
-        content: state.content
-    }
-})
 
 export default class App extends Component {
 
@@ -24,7 +17,7 @@ export default class App extends Component {
 
     componentWillMount(){
         const preloader = document.getElementById('preloader-wrapper')
-        preloader.classList.add('fadeOut')
+        if(preloader) preloader.classList.add('fadeOut')
         setTimeout(()=>{
             preloader.parentNode.removeChild(preloader)
         }, 500)
@@ -33,9 +26,11 @@ export default class App extends Component {
     }
 
     componentDidMount(){
-        ParallaxInit()
-        const scene = document.getElementById('scene'),
-              parallax = new Parallax(scene)
+        const scene = document.getElementById('scene')
+        if(scene) {
+            ParallaxInit()
+            const parallax = new Parallax(scene)
+        }
     }
 
     setRandomColor(){
@@ -66,7 +61,7 @@ export default class App extends Component {
                     <MainNavigation />
                     <div className="mainContent">
                         <ReactCSSTransitionGroup transitionName="mainContentWrapper" transitionEnterTimeout={0} transitionAppearTimeout={0} transitionLeaveTimeout={200} >
-                            {React.cloneElement(this.props.children, { key: _.uniqueId() })}
+                            {this.props.children && React.cloneElement(this.props.children, { key: _.uniqueId() })}
                         </ReactCSSTransitionGroup>
                     </div>
             </ReactCSSTransitionGroup>

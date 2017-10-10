@@ -5,7 +5,7 @@ if(prod){
     var webpack = require('webpack');
 
     module.exports = {
-        entry: __dirname + '/client/index.js',
+        entry: __dirname + '/src/client/index.js',
         output: {
             path: __dirname + '/web/js',
             filename: 'bundle.js'
@@ -45,7 +45,7 @@ if(prod){
 } else {
 
     module.exports = {
-        entry: __dirname + '/client/index.js',
+        entry: __dirname + '/src/client/index.js',
         output: {
             path: __dirname + '/web/js',
             filename: 'bundle.js'

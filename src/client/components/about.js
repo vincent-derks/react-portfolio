@@ -3,13 +3,7 @@ import { connect } from 'react-redux'
 
 import Logo from './logo'
 
-@connect(state => {
-    return {
-        about: state.contentReducer.content.about
-    }
-})
-
-export default class About extends Component {
+class About extends Component {
     render(){
         const { about } = this.props
         if(about){
@@ -24,3 +18,9 @@ export default class About extends Component {
         return <div>Loading content...</div>
     }
 }
+
+export default connect(state => {
+    return {
+        about: state.contentReducer.content.about
+    } 
+})(About)

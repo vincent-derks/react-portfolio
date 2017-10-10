@@ -4,13 +4,7 @@ import { Link } from 'react-router'
 
 import Logo from './logo'
 
-@connect((state, ownProps)=>{
-    return {
-        items: state.contentReducer.content.work.workItems.filter(item => item.slug == ownProps.params.item)
-    }
-})
-
-export default class WorkSinlge extends Component {
+class WorkSingle extends Component {
 
     render(){
         const items = this.props.items
@@ -32,3 +26,9 @@ export default class WorkSinlge extends Component {
         return <div>Loading content</div>
     }
 }
+
+export default connect((state, ownProps)=>{
+    return {
+        items: state.contentReducer.content.work.workItems.filter(item => item.slug == ownProps.params.item)
+    }
+})(WorkSingle)

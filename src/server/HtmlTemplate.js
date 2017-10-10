@@ -1,10 +1,6 @@
-var React = require('react')
-var Component = React.Component
-
-class MainComponent extends Component {
-    render(){
-        return (
-            <html>
+const HtmlTemplate = () => {
+    return `
+        <html>
             <head>
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,12 +19,11 @@ class MainComponent extends Component {
                 <div id="preloader-wrapper">
                     <div className="md-preloader"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="30" width="30" viewBox="0 0 75 75"><circle cx="37.5" cy="37.5" r="33.5" strokeWidth="8"/></svg></div>
                 </div>
-                <div id="app" />
-            <script src="/js/bundle.js" />
-            </body>
-            </html>
-        )
-    }
+                <div id="app"></div>
+                <script src="/js/bundle.js"></script>
+            </body>     
+        </html>
+    `
 }
 
-module.exports = MainComponent
+module.exports = HtmlTemplate

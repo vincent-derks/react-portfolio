@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/webpack && node server/index.js",
-    "build": "./node_modules/.bin/webpack -p && node server/index.js"
+    "start": "./node_modules/.bin/webpack && node src/server/index.js",
+    "build": "./node_modules/.bin/webpack -p && node src/server/index.js",
+    "test": "react-scripts test --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill",
+    "test-coverage": "react-scripts test --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill --coverage"
   },
   "author": "",
   "license": "ISC",
@@ -14,14 +16,15 @@
     "babel-register": "^6.26.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.1",
-    "nodemailer": "^4.1.1",
+    "nodemailer": "^4.1.3",
     "parallax-js": "^3.1.0",
-    "react": "^16.0.0",
+    "react": "^16",
     "react-addons-css-transition-group": "^15.6.2",
-    "react-dom": "^16.0.0",
+    "react-dom": "^16",
+    "react-html-document": "^3.1.0",
     "react-redux": "^5.0.6",
     "react-router": "^3",
-    "react-tooltip": "^3.2.2",
+    "react-tooltip": "^3.3.1",
     "redux": "^3.7.2"
   },
   "devDependencies": {
@@ -31,6 +34,14 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.1",
+    "jest": "^21.2.1",
+    "jest-cli": "^21.2.1",
+    "jest-enzyme": "^4.0.1",
+    "raf": "^3.4.0",
+    "react-scripts": "^1.0.14",
+    "react-test-renderer": "^16.0.0",
     "webpack": "^3"
   }
 }

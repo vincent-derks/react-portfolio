@@ -3,13 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import * as Actions from './../actions'
 
-@connect(state => {
-    return {
-        menuStatus: state.appReducer.menuOpen
-    }
-})
-
-export default class MainNavigation extends Component {
+class MainNavigation extends Component {
 
     toggleMenu(e){
         this.props.dispatch(Actions.toggleMenu())
@@ -29,3 +23,9 @@ export default class MainNavigation extends Component {
         )
     }
 }
+
+export default connect(state => {
+    return {
+        menuStatus: state.appReducer.menuOpen
+    }
+})(MainNavigation)

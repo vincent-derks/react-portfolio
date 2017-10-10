@@ -5,15 +5,7 @@ import _ from 'lodash'
 
 import Logo from './logo'
 
-@connect(state => {
-    return {
-        title: state.contentReducer.content.work.title,
-        content: state.contentReducer.content.work.content,
-        workItems: state.contentReducer.content.work.workItems
-    }
-})
-
-export default class Work extends Component {
+class Work extends Component {
 
     renderWork(){
         return this.props.workItems.map( (item, i) => {
@@ -31,3 +23,11 @@ export default class Work extends Component {
         )
     }
 }
+
+export default connect(state => {
+    return {
+        title: state.contentReducer.content.work.title,
+        content: state.contentReducer.content.work.content,
+        workItems: state.contentReducer.content.work.workItems
+    }
+})(Work)

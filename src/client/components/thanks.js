@@ -3,13 +3,7 @@ import { connect } from 'react-redux'
 
 import Logo from './logo'
 
-@connect(state => {
-    return {
-        thanks: state.contentReducer.content.thanks
-    }
-})
-
-export default class Thanks extends Component {
+class Thanks extends Component {
     render(){
         const { thanks } = this.props
         if(thanks){
@@ -24,3 +18,9 @@ export default class Thanks extends Component {
         return <div>Loading content...</div>
     }
 }
+
+export default connect(state => {
+    return {
+        thanks: state.contentReducer.content.thanks
+    }
+})(Thanks)

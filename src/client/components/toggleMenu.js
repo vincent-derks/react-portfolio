@@ -2,13 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import * as Actions from './../actions'
 
-@connect((state, ownProps)=>{
-    return {
-        menuOpen: state.appReducer.menuOpen
-    }
-})
-
-export default class ToggleMenu extends Component {
+class ToggleMenu extends Component {
 
     toggleMenu(e){
         e.preventDefault()
@@ -23,3 +17,8 @@ export default class ToggleMenu extends Component {
 
 }
 
+export default connect((state, ownProps)=>{
+    return {
+        menuOpen: state.appReducer.menuOpen
+    }
+})(ToggleMenu)

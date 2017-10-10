@@ -1,21 +1,4 @@
-require('babel-register')({
-    presets: ['react']
-})
-
-let nodemailer = require('nodemailer')
-let express = require('express')
-let React = require('react')
-let ReactDOMServer = require('react-dom/server')
-let MainComponent = require('./MainComponent')
-let bodyParser = require('body-parser')
-
-const App = express()
-
-App.use(express.static('web'))
-App.use(bodyParser.json())
-
-App.post('/handle-contact-form', (req, res) => {
-    
+const handleMail = (req, res) => {
     let response = {
         status: 'success',
         message: ''
@@ -55,18 +38,6 @@ App.post('/handle-contact-form', (req, res) => {
         })
 
     }
+}
 
-})
-
-App.get('*/*', (req, res) => {
-    const html = ReactDOMServer.renderToString(
-        React.createElement(MainComponent)
-    )
-    res.send(html)
-})
-
-const Port = 3000
-
-App.listen(Port, () => {
-    console.log(`listening on http://localhost:${Port}`)
-})
+module.exports = handleMail
