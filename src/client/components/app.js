@@ -3,12 +3,13 @@ import _ from 'lodash'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import * as Actions from './../actions'
 import ParallaxInit from './../libs/parallax'
+import { connect } from 'react-redux'
 
 // Components
 import ToggleMenu from './toggleMenu'
 import MainNavigation from './mainNavigation'
 
-export default class App extends Component {
+export class App extends Component {
 
     constructor(props){
         super(props)
@@ -69,3 +70,7 @@ export default class App extends Component {
     }
 
 }
+
+export default connect(state => {
+    return {}
+})(App)
