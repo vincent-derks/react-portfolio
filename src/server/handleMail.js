@@ -22,7 +22,7 @@ const handleMail = (req, res) => {
         })
 
         let mailOptions = {
-            from: '"'+req.body.name+'" <'+req.body.email+'>', // sender address
+            from: 'info@vderks.online', // sender address
             to: 'vincent.derks@gmail.com', // list of receivers
             subject: 'Hello from my portfolio', // Subject line
             text: req.body.message, // plain text body
