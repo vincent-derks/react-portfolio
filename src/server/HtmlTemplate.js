@@ -15,7 +15,7 @@ const HtmlTemplate = () => {
                 <link href="/css/preloader.css" rel="stylesheet" />
                 <link href="/css/style.css" rel="stylesheet" />
             </head>
-            <body>
+            <body class="js-template">
                 <div id="preloader-wrapper">
                     <div className="md-preloader"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="30" width="30" viewBox="0 0 75 75"><circle cx="37.5" cy="37.5" r="33.5" strokeWidth="8"/></svg></div>
                 </div>
