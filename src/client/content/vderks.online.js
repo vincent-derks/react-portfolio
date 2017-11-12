@@ -63,7 +63,7 @@ const Data = {
         "slug" : "vderks-online",
         "techniques" : ["javascript", "react", "redux"],
         "short_content" : "My own portfolio website",
-        "content" : "<p>Of course, my own portfolio can't be missing from my projects. You're visiting the website right now, but I'd like to explain a little bit about the techniques behind this website.</p><p>The website is build using React, React Router and Redux. No CMS behind this one, just plain old JSON data. The code for this project can be found on Github on the link below.</p>",
+        "content" : "<p>Of course, my own portfolio can't be missing from my projects. You're visiting the website right now, but I'd like to explain a little bit about the techniques behind this website.</p><p>The website is build using React, React Router and Redux. No CMS behind this one, just plain old JSON data. This portfolio website is served up using Node & Express.js</p><p>The code for this project can be found on Github on the link below.</p>",
         "title" : "This portfolio",
         "link" : "https://github.com/vincent-derks/react-portfolio"
       }, {
