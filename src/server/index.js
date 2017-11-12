@@ -2,7 +2,6 @@ require('babel-register')({
     presets: ['react']
 })
 
-let nodemailer = require('nodemailer')
 let express = require('express')
 let HtmlTemplate = require('./HtmlTemplate')
 let bodyParser = require('body-parser')

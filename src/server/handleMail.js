@@ -1,3 +1,5 @@
+let nodemailer = require('nodemailer')
+
 const handleMail = (req, res) => {
     let response = {
         status: 'success',
