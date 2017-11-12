@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack && node src/server/index.js",
-    "build": "./node_modules/.bin/webpack -p && node src/server/index.js",
+    "build": "./node_modules/.bin/webpack -p && node src/server/index.js -p",
     "test": "react-scripts test --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill",
     "test-coverage": "react-scripts test --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill --coverage"
   },
