@@ -21,7 +21,8 @@ App.get('*', (req, res) => {
     res.send(HtmlTemplate())
 })
 
-const Port = 3000
+const prod = process.argv.indexOf('-p') !== -1
+const Port = prod ? 80 : 3000
 
 App.listen(Port, () => {
     console.log(`listening on http://localhost:${Port}`)
