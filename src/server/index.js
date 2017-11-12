@@ -22,7 +22,7 @@ App.get('*', (req, res) => {
 })
 
 const prod = process.argv.indexOf('-p') !== -1
-const Port = prod ? 80 : 3000
+const Port = prod ? 8080 : 3000
 
 App.listen(Port, () => {
     console.log(`listening on http://localhost:${Port}`)
